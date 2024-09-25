@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module03Exercise01.View.EmployeePage"
+             Title="EmployeePage"
+             BackgroundColor="White">
+
+    <ScrollView>
+    <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center" HorizontalOptions="Center">
+
+        <Label Text="Manager"
+               FontSize="Large"
+               TextColor="Black"/>
+        
+        <Label Text="{Binding FullName}" 
+            FontSize="24" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center" 
+            TextColor="LightPink" 
+            FontAttributes="Bold"/>
+
+        <Button Text="Load Employee Manager"
+             Command="{Binding LoadEmployeeManagerCommand}" 
+             BackgroundColor="LightSkyBlue" 
+             TextColor="White" 
+             CornerRadius="10"
+             Padding="10" 
+             HorizontalOptions="Center"/>
+
+
+        <Label Text="Employees:" 
+            TextColor="DarkSlateBlue" 
+            FontAttributes="Bold"
+            FontSize="Medium"/>
+
+        <!-- ListView bound to Employees collection -->
+        <ListView ItemsSource="{Binding Employees}" 
+               SeparatorColor="LightGray" 
+              >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding FullNames}" 
+                           Detail="{Binding PosDep}"
+                           TextColor="Black"
+                           DetailColor="Gray"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Add New Employee"
+                Clicked="OnButtonClickedAddEmployee" />
+    </VerticalStackLayout>
+        </ScrollView>
+</ContentPage>

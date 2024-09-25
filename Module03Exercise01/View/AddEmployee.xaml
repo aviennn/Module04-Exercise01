@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module03Exercise01.View.AddEmployee"
+             Title="Add An Employee"
+             BackgroundColor="#E0FFFF">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label 
+                Text="Add New Employee"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                TextColor="Black"
+                FontSize="Large"
+                FontAttributes="Bold"/>
+
+            <Frame Padding="15" BackgroundColor="#F0F8FF" CornerRadius="10" HasShadow="True">
+                <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+                    <Label Text="First Name:" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="0" 
+                           Grid.Column="0"/>
+                    
+                    <Entry Placeholder="Firstname" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="0" 
+                           Grid.Column="1"/>
+
+                    <Label Text="Last Name:" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="1" 
+                           Grid.Column="0"/>
+                    
+                    <Entry Placeholder="Lastname" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="1" 
+                           Grid.Column="1"/>
+
+                    <Label Text="Full Name:" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="2" 
+                           Grid.Column="0"/>
+                    
+                    <Entry Placeholder="Fullname" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="2" 
+                           Grid.Column="1"/>
+
+                    <Label Text="Municipality:" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="3" 
+                           Grid.Column="0"/>
+                    
+                    <Entry Placeholder="Municipality" 
+                           TextColor="Black" 
+                           x:Name="MunicipalityEntry" 
+                           VerticalOptions="Center" 
+                           Grid.Row="3" 
+                           Grid.Column="1"/>
+
+                    <Label Text="Province:" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="4" 
+                           Grid.Column="0"/>
+                    
+                    <Entry Placeholder="Province" 
+                           TextColor="Black" 
+                           x:Name="ProvinceEntry" 
+                           VerticalOptions="Center" 
+                           Grid.Row="4" 
+                           Grid.Column="1"/>
+                </Grid>
+            </Frame>
+
+            <Label Text="Coordinates:" 
+                   TextColor="Black" 
+                   FontAttributes="Bold"/>
+            
+            <Label Text="The Coordinates will be displayed here" 
+                   TextColor="Black" 
+                   x:Name="CoordinatesDisplay"/>
+
+            <Frame Padding="15" BackgroundColor="#F0F8FF" CornerRadius="10" HasShadow="True">
+                <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto">
+                    <Label Text="Position:" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="0" 
+                           Grid.Column="0"/>
+                    
+                    <Entry Placeholder="Position" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="0" 
+                           Grid.Column="1"/>
+
+                    <Label Text="Department:" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="1" 
+                           Grid.Column="0"/>
+                    
+                    <Entry Placeholder="Department" 
+                           TextColor="Black" 
+                           VerticalOptions="Center" 
+                           Grid.Row="1" Grid.Column="1"/>
+                </Grid>
+            </Frame>
+
+            <Button Text="Capture Employee"
+                    Clicked="OnCapturePhotoClicked"
+                    BackgroundColor="LightSeaGreen"
+                    CornerRadius="10"
+                    Padding="10"/>
+
+            <Image x:Name="CaptureImage"
+                   HeightRequest="300"
+                   WidthRequest="300"
+                   Aspect="AspectFill"/>
+
+            <Button Text="Get Location"
+                    Clicked="OnGetLocationClicked"
+                    BackgroundColor="LightSeaGreen"
+                    CornerRadius="10"
+                    Padding="10"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
