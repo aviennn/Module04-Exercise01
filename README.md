@@ -1,17 +1,11 @@
 # Module03Exercise01
 
-## Offline Page
-![1](pics/offline.png)
+## Fill Up Form
+![1](module04exercise01pics/1.png)
+![2](module04exercise01pics/2.png)
 
-## Retry button clicked
-![3](pics/retry.png)
-
-## Online page
-![3](pics/online.png)
-
-## Login Success
-![4](pics/loginsuccess.png)
+## Added An Employee
+![3](module04exercise01pics/3.png)
+![4](module04exercise01pics/4.png)
 
 
-
-# Module03-Exercise02
